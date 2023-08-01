@@ -1,3 +1,4 @@
+import prismadb from "@/lib/prismadb";
 import { CreditCard, DollarSign, Package } from "lucide-react";
 
 // import { Separator } from "@/components/ui/separator";
@@ -17,6 +18,11 @@ interface DashboardPageProps {
 }
 
 const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
+  const store = await prismadb.store.findFirst({
+    where: {
+      id: params.storeId
+    }
+  });
   // const totalRevenue = await getTotalRevenue(params.storeId);
   // const graphRevenue = await getGraphRevenue(params.storeId);
   // const salesCount = await getSalesCount(params.storeId);
@@ -25,7 +31,7 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
   return (
     <div className="flex-col">
       <div className="flex-1 space-y-4 p-8 pt-6">
-        this is dash board
+        this is dash board asdf {store?.name}
         {/* <Heading title="Dashboard" description="Overview of your store" />
         <Separator />
         <div className="grid gap-4 grid-cols-3">
