@@ -51,7 +51,7 @@ npm install @tanstack/react-table
 npm install next-cloudinary
 npm install date-fns
 npm install react-hook-form zod react-hook-form-zod
-npm i -D prisma
+
 npm install @prisma/client
 npm install lucide-react
 npm install react-hot-toast
@@ -69,6 +69,7 @@ git log
 git checkout -b new-branch-name 18973072d2b32f3450cd49c62bd584d75138cf9e
 
 // prisma
+npm i -D prisma
 npx prisma init
 npx prisma generate
 npx prisma db push
