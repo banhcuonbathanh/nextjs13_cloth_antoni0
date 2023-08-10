@@ -58,7 +58,7 @@ npm install react-hot-toast
 npm install query-string
 npm install @headlessui/react
 npm install axios
-
+npm uninstall stripe
 
 
 // git
