@@ -18,10 +18,13 @@ git push -u origin main
 
 
 
+
 // delete git
 git remote remove origin
 git remote -v
 
+git checkout main
+git merge feature/dashboard-product
 
 //
 
